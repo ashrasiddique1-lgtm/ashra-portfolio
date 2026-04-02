@@ -35,12 +35,12 @@ export default function Navigation() {
             >
               About
             </Link>
-            <Link
+            {/* <Link
               href="/contact"
               className="text-sm font-medium bg-black text-white px-6 py-2 hover:bg-gray-800 transition"
             >
               Contact
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}

@@ -14,7 +14,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Portfolio</h1>
           <p className="text-xl text-gray-600 max-w-2xl">
-            Explore a curated selection of my latest design work spanning evening wear, sustainable fashion, and innovative streetwear.
+            Explore a curated selection of my work in pattern making, draping, and couture garment development. Each piece reflects precision, silhouette refinement, and advanced construction techniques across bridal, evening wear, and structured garments.
           </p>
         </div>
       </section>
