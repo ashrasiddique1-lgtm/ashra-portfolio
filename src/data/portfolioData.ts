@@ -70,5 +70,21 @@ export const portfolioItems = [
     description: "An asymmetric halter gown featuring fluid satin draping and sculpted body contouring. The design highlights a soft cowl neckline that transitions into a single-shoulder halter with an elegant scarf extension. The back features a gathered circular cut-out detail, adding visual interest and enhancing the silhouette. Developed through advanced draping techniques, this piece emphasizes fluidity, movement, and couture-level fabric manipulation.",
     image: "/portfolio/asymmetric-halter-draped-gown.png",
     year: 2024,
-  }
+  },
+  {
+  id: 10,
+  title: "Structured Sweetheart Corset",
+  category: "Corsetry & Pattern Making",
+  description: "A structured sweetheart corset featuring contoured cup shaping and precision panel construction for a sculpted waistline. The design emphasizes clean seam lines and engineered fit, creating a balanced silhouette with subtle flare at the hip. Developed through technical pattern making and corsetry techniques, this piece highlights garment structure, fit refinement, and construction accuracy.",
+  image: "/portfolio/structured-sweetheart-corset.jpg",
+  year: 2024,
+},
+{
+  id: 11,
+  title: "Sculpted Sweetheart Corset Bodice",
+  category: "Corsetry & Pattern Making",
+  description: "A structured sweetheart corset bodice featuring sculpted cup construction and elongated pointed waistline. The design incorporates vertical panel shaping to enhance body contour and create a refined silhouette. Developed through precision pattern making and corsetry techniques, this piece highlights structural engineering, fit accuracy, and clean couture construction.",
+  image: "/portfolio/sculpted-sweetheart-corset-bodice.jpg",
+  year: 2024,
+}
 ];
