@@ -20,7 +20,7 @@ export const portfolioItems = [
     title: "Sculpted Off-Shoulder Draped Gown Back",
     category: "Draping & Couture Development",
     description: "An architectural off-shoulder couture gown featuring a structured corset bodice with soft folded neckline and precision waist shaping. The design extends into a voluminous pleated skirt with an elongated dramatic train, created through advanced draping and volume construction techniques. This piece emphasizes couture craftsmanship, silhouette engineering, and balance between structured bodice and fluid movement.",
-    image: "/portfolio/sculpted-draped-gown-back.jpg",
+    image: "/portfolio/sculpted-draped-gown-back.png",
     year: 2025,
   },
   {
@@ -84,7 +84,7 @@ export const portfolioItems = [
   title: "Sculpted Sweetheart Corset Bodice",
   category: "Corsetry & Pattern Making",
   description: "A structured sweetheart corset bodice featuring sculpted cup construction and elongated pointed waistline. The design incorporates vertical panel shaping to enhance body contour and create a refined silhouette. Developed through precision pattern making and corsetry techniques, this piece highlights structural engineering, fit accuracy, and clean couture construction.",
-  image: "/portfolio/sculpted-sweetheart-corset-bodice.jpg",
+  image: "/portfolio/sculpted-sweetheart-corset-bodice.png",
   year: 2024,
 }
 ];
