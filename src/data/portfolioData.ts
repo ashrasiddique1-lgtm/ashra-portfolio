@@ -2,7 +2,7 @@ export const portfolioItems = [
   {
     id: 1,
     title: "Corset Dress",
-    category: "Corsetry & Draping",
+    category: "Draping & Couture Development",
     description: "A structured ivory corset dress featuring a sculpted bodice with clean neckline and contoured waist. The design transitions into a soft draped skirt enhanced with asymmetric cascading ruffles, creating a balance between structure and fluidity. Developed through precision pattern making and draping, this piece highlights technical craftsmanship and modern couture aesthetics.",
     image: "/portfolio/ivory-corset-dress.jpg",
     year: 2025,
@@ -26,7 +26,7 @@ export const portfolioItems = [
   {
     id: 4,
     title: "Draped Corset Mini Dress",
-    category: "Corsetry & Draping",
+    category: "Draping & Couture Development",
     description: "A structured strapless corset mini dress featuring directional draping across the bodice and a sculpted waistline. The design is complemented by a gathered mini skirt that adds volume and contrast to the fitted upper silhouette. Developed through hands-on draping techniques, this piece highlights precision shaping, fabric manipulation, and contemporary couture construction.",
     image: "/portfolio/draped-corset-mini-1.png",
     year: 2025,
@@ -42,7 +42,7 @@ export const portfolioItems = [
   {
     id: 6,
     title: "Ruched Draped Corset Bodice",
-    category: "Corsetry & Draping",
+    category: "Draping & Couture Development",
     description: "A strapless corset bodice featuring directional ruching and soft fabric draping across the torso. The design enhances the natural silhouette with structured shaping underneath and fluid draped layers on top. Developed using precision draping techniques, this piece highlights fabric manipulation, contouring, and couture-inspired corsetry construction.",
     image: "/portfolio/ruched-corset-bodice.png",
     year: 2025,
@@ -50,7 +50,7 @@ export const portfolioItems = [
   {
     id: 7,
     title: "Structured Corset Draped Evening Gown",
-    category: "Corsetry & Draping",
+    category: "Draping & Couture Development",
     description: "A structured corset evening gown featuring contoured cup shaping and vertical panel construction for a sculpted silhouette. The design transitions into an asymmetric draped skirt with a front slit and subtle flare at the hem, balancing structure with fluid movement. Developed through technical corsetry and draping techniques, this piece highlights precision fit, silhouette engineering, and couture-inspired construction.",
     image: "/portfolio/structured-corset-draped-gown.png",
     year: 2025,
@@ -74,7 +74,7 @@ export const portfolioItems = [
   {
     id: 10,
     title: "Structured Sweetheart Corset",
-    category: "Corsetry & Pattern Making",
+    category: "Pattern Making & Development",
     description: "A structured sweetheart corset featuring contoured cup shaping and precision panel construction for a sculpted waistline. The design emphasizes clean seam lines and engineered fit, creating a balanced silhouette with subtle flare at the hip. Developed through technical pattern making and corsetry techniques, this piece highlights garment structure, fit refinement, and construction accuracy.",
     image: "/portfolio/structured-sweetheart-corset.png",
     year: 2024,
@@ -82,7 +82,7 @@ export const portfolioItems = [
   {
     id: 11,
     title: "Sculpted Sweetheart Corset Bodice",
-    category: "Corsetry & Pattern Making",
+    category: "Pattern Making & Development",
     description: "A structured sweetheart corset bodice featuring sculpted cup construction and elongated pointed waistline. The design incorporates vertical panel shaping to enhance body contour and create a refined silhouette. Developed through precision pattern making and corsetry techniques, this piece highlights structural engineering, fit accuracy, and clean couture construction.",
     image: "/portfolio/sculpted-sweetheart-corset-bodice.png",
     year: 2024,
@@ -90,7 +90,7 @@ export const portfolioItems = [
   {
     id: 12,
     title: "Plunge Sweetheart Structured Mini Dress",
-    category: "Corsetry & Pattern Making",
+    category: "Pattern Making & Development",
     description: "A structured strapless mini dress featuring a deep plunge sweetheart neckline and sculpted bodice construction. The fitted silhouette enhances body contouring while maintaining clean seam lines and precise shaping. Developed through technical pattern making and corsetry techniques, this piece highlights silhouette engineering, fit refinement, and modern couture-inspired construction.",
     image: "/portfolio/plunge-sweetheart-mini-dress.png",
     year: 2024,
@@ -106,7 +106,7 @@ export const portfolioItems = [
 {
   id: 14,
   title: "Off-Shoulder Structured Corset Bodice",
-  category: "Corsetry & Pattern Making",
+  category: "Pattern Making & Development",
   description: "An off-shoulder structured corset bodice featuring a clean V-shaped neckline and contoured panel construction. The elongated pointed waist enhances the silhouette, while the fitted shaping emphasizes precision pattern making and structural balance. Developed through technical corsetry techniques, this piece highlights clean construction, refined shaping, and modern couture-inspired design.",
   image: "/portfolio/off-shoulder-structured-corset.png",
   year: 2024,
@@ -114,7 +114,7 @@ export const portfolioItems = [
 {
   id: 15,
   title: "Draped Strapless Corset Bodice",
-  category: "Draping & Corsetry",
+  category: "Draping & Couture Development",
   description: "A strapless corset bodice featuring soft asymmetric draping across the bust and contoured waist shaping. The elongated pointed waistline enhances the silhouette while the draped overlay adds fluidity to the structured base. Developed through advanced draping techniques and precision pattern making, this piece highlights balance between structure and soft fabric manipulation.",
   image: "/portfolio/draped-strapless-corset.png",
   year: 2024,
@@ -122,7 +122,7 @@ export const portfolioItems = [
 {
   id: 16,
   title: "Structured Corset A-Line Gown",
-  category: "Corsetry & Couture Development",
+  category: "Pattern Making & Development",
   description: "A strapless corset gown featuring structured panel construction and a contoured sweetheart neckline. The fitted bodice transitions into a voluminous A-line skirt with extended train, creating an elegant and dramatic silhouette. Developed through precision pattern making and couture construction techniques, this piece highlights structural balance, clean seam engineering, and refined silhouette development.",
   image: "/portfolio/structured-corset-a-line-gown.png",
   year: 2024,
@@ -138,7 +138,7 @@ export const portfolioItems = [
 {
   id: 19,
   title: "Soft Tulle Bridal Gown",
-  category: "Bridal & Couture Draping",
+  category: "Draping & Couture Development",
   description: "A romantic strapless bridal gown featuring a softly gathered bodice with center cut-out detail and structured waistband. The voluminous layered tulle skirt creates fluid movement and elegant volume, balanced with a clean and modern silhouette. This piece demonstrates expertise in bridal draping, fabric layering, and couture finishing techniques.",
   image: "/portfolio/soft-tulle-bridal-gown.png",
   year: 2024,
@@ -146,7 +146,7 @@ export const portfolioItems = [
 {
   id: 20,
   title: "Soft Tulle Bridal Gown Back",
-  category: "Bridal & Couture Draping",
+  category: "Draping & Couture Development",
   description: "A romantic strapless bridal gown featuring a softly gathered bodice with center cut-out detail and structured waistband. The voluminous layered tulle skirt creates fluid movement and elegant volume, balanced with a clean and modern silhouette. This piece demonstrates expertise in bridal draping, fabric layering, and couture finishing techniques.",
   image: "/portfolio/soft-tulle-bridal-gown-back.png",
   year: 2024,
@@ -154,7 +154,7 @@ export const portfolioItems = [
 {
   id: 21,
   title: "Structured Draped Evening Gown",
-  category: "Draping & Evening Wear",
+  category: "Draping & Couture Development",
   description: "A strapless evening gown developed through precision draping techniques, featuring sculptural cross-body drapes and soft cascading folds. The structured bodice enhances silhouette definition while fluid fabric movement adds elegance and sophistication. This piece highlights advanced draping, fit development, and couture construction.",
   image: "/portfolio/structured-draped-evening-gown.png",
   year: 2024,
@@ -162,7 +162,7 @@ export const portfolioItems = [
 {
   id: 22,
   title: "Sculpted Draped Dress",
-  category: "Draping & Evening Wear",
+  category: "Draping & Couture Development",
   description: "A structured mini dress featuring a sculpted sweetheart neckline with deep plunge detail and precision cross-body draping. The asymmetric waist drape enhances body contour while maintaining a clean, modern silhouette. This piece highlights advanced draping techniques, form shaping, and couture-level garment development.",
   image: "/portfolio/sculpted-draped-mini-dress.png",
   year: 2024,
@@ -170,7 +170,7 @@ export const portfolioItems = [
 {
   id: 23,
   title: "Off-Shoulder Draped Corset",
-  category: "Corsetry & Draping",
+  category: "Draping & Couture Development",
   description: "An off-shoulder corset developed using precision draping techniques, featuring soft gathered bust drapes and sculpted waist shaping. The layered waist draping enhances structure while maintaining fluidity and elegance. This piece demonstrates advanced corsetry development, contour shaping, and couture draping expertise.",
   image: "/portfolio/off-shoulder-draped-corset.png",
   year: 2024,
