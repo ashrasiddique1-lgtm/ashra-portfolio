@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-4">ASHRA SIDDIQUE
+            <h3 className="text-xl font-bold mb-4">ASHRA
 Fashion Designer & Pattern Maker</h3>
             <p className="text-gray-400 text-sm">
               Specializing in Corsetry, Draping, and Garment Development

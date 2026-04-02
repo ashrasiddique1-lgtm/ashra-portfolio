@@ -119,7 +119,7 @@ export default function Home() {
               </h2>
 
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Ashra Siddique is a fashion designer and pattern maker
+                Ashra is a fashion designer and pattern maker
                 specializing in corsetry, draping, and garment development.
                 Her work focuses on structured silhouettes and technical precision.
               </p>
