@@ -32,7 +32,6 @@ for Contemporary & Couture Fashion
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="https://www.instagram.com/ash_na221/" className="hover:text-white transition">Instagram</a></li>
               <li><a href="https://www.linkedin.com/in/ashra-siddiqui-21431a2a8/" className="hover:text-white transition">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-white transition">Pinterest</a></li>
             </ul>
           </div>
 
@@ -48,7 +47,7 @@ for Contemporary & Couture Fashion
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-800 pt-8">
+        {/* <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
               © {currentYear} Ashra Fashion. All rights reserved.
@@ -58,7 +57,7 @@ for Contemporary & Couture Fashion
               <a href="#" className="hover:text-white transition">Terms of Service</a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

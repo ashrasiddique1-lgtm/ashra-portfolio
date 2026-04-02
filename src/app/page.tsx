@@ -29,12 +29,12 @@ export default function Home() {
               View Portfolio
             </Link>
 
-            <Link
+            {/* <Link
               href="/contact"
               className="px-8 py-3 border border-black text-black font-medium hover:bg-black hover:text-white transition inline-block"
             >
               Get In Touch
-            </Link>
+            </Link> */}
           </div>
 
         </div>

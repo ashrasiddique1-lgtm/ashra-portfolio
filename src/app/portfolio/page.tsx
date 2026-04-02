@@ -27,7 +27,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-black text-white py-20">
+      {/* <section className="bg-black text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Looking for a Collaboration?</h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -40,7 +40,7 @@ export default function PortfolioPage() {
             Get In Touch
           </a>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

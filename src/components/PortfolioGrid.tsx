@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import PortfolioModal from "./PortfolioModal";
 
 interface PortfolioItem {
   id: number;
@@ -66,66 +67,13 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
             <div className="mt-4">
               <h3 className="text-lg font-semibold">{item.title}</h3>
               <p className="text-sm text-gray-600">{item.category}</p>
-              <p className="text-xs text-gray-500 mt-2">{item.year}</p>
+              {/* <p className="text-xs text-gray-500 mt-2">{item.year}</p> */}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Modal Overlay */}
-      {selectedItem && (
-        <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-xl flex items-center justify-center z-50 p-6"
-          onClick={() => setSelectedItem(null)}
-        >
-          <div
-            className="relative max-w-6xl w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedItem(null)}
-              className="absolute top-4 right-4 z-20 text-white text-3xl bg-black/50 hover:bg-black/70 w-12 h-12 rounded-full flex items-center justify-center transition"
-            >
-              ×
-            </button>
-
-            {/* Frost Glass Container */}
-            <div className="bg-white/10 backdrop-blur-2xl rounded-xl overflow-hidden shadow-2xl border border-white/20">
-
-              {/* Image */}
-              <div className="relative w-full bg-black/20 flex items-center justify-center">
-                <div className="relative w-full h-[75vh]">
-                  <Image
-                    src={selectedItem.image}
-                    alt={selectedItem.title}
-                    fill
-                    priority
-                    sizes="100vw"
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* Details */}
-              <div className="bg-white/80 backdrop-blur-md p-6">
-                <h2 className="text-2xl font-semibold mb-2">
-                  {selectedItem.title}
-                </h2>
-
-                <p className="text-sm text-gray-600 mb-3">
-                  {selectedItem.category} • {selectedItem.year}
-                </p>
-
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {selectedItem.description}
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      )}
+      <PortfolioModal item={selectedItem} onClose={() => setSelectedItem(null)} />
     </div>
   );
 }
