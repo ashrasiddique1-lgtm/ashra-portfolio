@@ -1,13 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="w-full">
-      
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="text-center px-4">
-          
+
           <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-2">
             ASHRA
           </h1>
@@ -17,7 +18,7 @@ export default function Home() {
           </p>
 
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Specializing in Corsetry, Draping and Garment Development 
+            Specializing in Corsetry, Draping and Garment Development
             for Contemporary & Couture Fashion
           </p>
 
@@ -42,7 +43,7 @@ export default function Home() {
 
 
       {/* Featured Work */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <h2 className="text-4xl font-bold mb-12 text-center">
@@ -89,18 +90,26 @@ export default function Home() {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* About Preview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
+
             <div>
               <div className="bg-gray-300 h-96 flex items-center justify-center">
-                <span className="text-gray-500">Profile Image</span>
+                {/* <span className="text-gray-500">Profile Image</span> */}
+                  <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
+                    <Image
+                      src="/profile.jpg"
+                      alt="Ashra - Fashion Designer"
+                      fill
+                      className="object-cover object-center"
+                    />
+                  </div>
               </div>
             </div>
 
@@ -110,14 +119,14 @@ export default function Home() {
               </h2>
 
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Ashra Siddique is a fashion designer and pattern maker 
-                specializing in corsetry, draping, and garment development. 
+                Ashra Siddique is a fashion designer and pattern maker
+                specializing in corsetry, draping, and garment development.
                 Her work focuses on structured silhouettes and technical precision.
               </p>
 
               <p className="text-gray-600 mb-8 leading-relaxed">
-                With experience in development, mock making, grading, and design 
-                corrections, Ashra combines creativity with strong technical skills 
+                With experience in development, mock making, grading, and design
+                corrections, Ashra combines creativity with strong technical skills
                 to create innovative garments.
               </p>
 
@@ -161,7 +170,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            
+
             <div>
               <div className="text-4xl font-bold mb-2">20+</div>
               <div className="text-gray-400">Developments</div>

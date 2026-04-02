@@ -3,6 +3,8 @@ export const metadata = {
   description: "Learn more about Ashra, a visionary fashion designer with over 15 years of experience.",
 };
 
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <div className="w-full">
@@ -21,9 +23,14 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="bg-gray-300 h-96 flex items-center justify-center">
-                <span className="text-gray-500">Profile Image</span>
-              </div>
+              <Image
+                src="/profile.jpg"
+                alt="Ashra - Fashion Designer"
+                width={400}
+                height={500}
+                priority
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
             </div>
             <div>
               <h2 className="text-4xl font-bold mb-6">My Story</h2>

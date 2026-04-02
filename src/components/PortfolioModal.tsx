@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useState } from "react";
 
 interface PortfolioItem {
   id: number;
@@ -11,60 +13,83 @@ interface PortfolioItem {
   year: number;
 }
 
-interface PortfolioModalProps {
+interface Props {
   item: PortfolioItem | null;
   onClose: () => void;
 }
 
-export default function PortfolioModal({ item, onClose }: PortfolioModalProps) {
+export default function PortfolioModal({ item, onClose }: Props) {
+  const [scale, setScale] = useState(1);
+
+  const y = useMotionValue(0);
+  const opacity = useTransform(y, [-200, 0, 200], [0.5, 1, 0.5]);
+
   if (!item) return null;
+
+  const handleDoubleClick = () => {
+    setScale((prev) => (prev > 1 ? 1 : 2));
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    setScale((prev) =>
+      Math.min(4, Math.max(1, prev - e.deltaY * 0.001))
+    );
+  };
 
   return (
     <div
-      className="fixed inset-0 bg-black/60 backdrop-blur-xl flex items-center justify-center z-50 p-0 md:p-6"
+      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl"
       onClick={onClose}
     >
-      <div
-        className="relative w-full h-full md:w-auto md:h-auto md:max-w-6xl md:max-h-[90vh] md:overflow-visible overflow-y-auto"
-        onClick={(e) => e.stopPropagation()}
+      {/* Close */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-50 text-white text-3xl bg-white/20 backdrop-blur-md w-12 h-12 rounded-full"
       >
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-20 text-white text-2xl md:text-3xl bg-black/50 hover:bg-black/70 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition"
+        ×
+      </button>
+
+      {/* Image container */}
+      <motion.div
+        className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
+        style={{ y, opacity }}
+        drag="y"
+        dragConstraints={{ top: -200, bottom: 200 }}
+        onDragEnd={(_, info) => {
+          if (info.offset.y > 150) onClose();
+        }}
+        onClick={(e) => e.stopPropagation()}
+        onWheel={handleWheel}
+      >
+        <motion.div
+          drag
+          dragConstraints={{ left: -500, right: 500, top: -500, bottom: 500 }}
+          whileTap={{ cursor: "grabbing" }}
+          animate={{ scale }}
+          transition={{ type: "spring", stiffness: 200, damping: 25 }}
+          onDoubleClick={handleDoubleClick}
+          className="relative w-full h-full flex items-center justify-center"
         >
-          ×
-        </button>
-
-        {/* Frost Glass Container */}
-        <div className="bg-white/10 backdrop-blur-2xl md:rounded-xl overflow-hidden shadow-2xl border border-white/20 h-full md:h-auto flex flex-col">
-
-          {/* Image */}
-          <div className="relative w-full bg-black/20 flex items-center justify-center flex-grow md:flex-grow-0">
-            <div className="relative w-full h-64 md:h-[60vh] lg:h-[75vh]">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                priority
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 80vw"
-                className="object-contain"
-              />
-            </div>
+          <div className="relative w-full h-full max-w-[90vw] max-h-[90vh]">
+            <Image
+              src={item.image}
+              alt={item.title}
+              fill
+              priority
+              sizes="100vw"
+              className="object-contain select-none"
+            />
           </div>
+        </motion.div>
+      </motion.div>
 
-          {/* Details */}
-          <div className="bg-white/80 backdrop-blur-md p-4 md:p-6">
-            <h2 className="text-xl md:text-2xl font-semibold mb-1 md:mb-2 pr-8">
-              {item.title}
-            </h2>
-
-            <p className="text-xs md:text-sm text-gray-600">
-              {item.category} • {item.year}
-            </p>
-          </div>
-
-        </div>
+      {/* Bottom Info */}
+      <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
+        <h2 className="text-lg font-semibold">{item.title}</h2>
+        <p className="text-sm opacity-80">
+          {item.category} • {item.year}
+        </p>
       </div>
     </div>
   );
