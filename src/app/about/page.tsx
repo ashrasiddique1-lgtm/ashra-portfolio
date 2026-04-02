@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">About Me</h1>
           <p className="text-xl text-gray-600 max-w-2xl">
-            A creative journey spanning over 15 years of innovation, sustainability, and bold design choices.
+            A creative journey focused on craftsmanship, structure, and innovation, where technical expertise meets artistic design.
           </p>
         </div>
       </section>
@@ -28,13 +28,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-4xl font-bold mb-6">My Story</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                I grew up surrounded by fabrics, colors, and the endless possibilities of design. My passion for fashion was kindled at an early age, and I pursued formal training at the prestigious Fashion Institute of Technology.
-              </p>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Over the years, I've worked with renowned fashion houses and independent brands, building a reputation for creating innovative designs that challenge conventions while remaining deeply rooted in craftsmanship.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Today, my work focuses on sustainable luxury—creating pieces that are beautiful, ethical, and designed to last. Every collection tells a story of innovation, cultural inspiration, and a commitment to environmental responsibility.
+                Fashion designer specializing in pattern making, garment construction, corsetry, and draping. My work focuses on structured silhouettes, intricate detailing, and creative garment development. I combine technical precision with artistic expression to create designs that are both innovative and well-crafted.
               </p>
             </div>
           </div>
