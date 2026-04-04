@@ -9,7 +9,7 @@ interface PortfolioItem {
   title: string;
   category: string;
   description: string;
-  image: string;
+  images: { view: "front" | "back", image: string }[];
   year: number;
 }
 
@@ -56,7 +56,7 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
           >
             <div className="relative w-full h-96 bg-gray-200 overflow-hidden">
               <Image
-                src={item.image}
+                src={item.images[0].image}
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

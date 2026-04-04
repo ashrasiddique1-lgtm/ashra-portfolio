@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact - Ashra Siddique",
+  title: "Contact - Ashra",
   description: "Get in touch for pattern making, draping, and garment development collaborations.",
 };
 
