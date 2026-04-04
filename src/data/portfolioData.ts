@@ -232,5 +232,35 @@ export const portfolioItems = [
     { view: "front", image: "/portfolio/structured-corset-mini-dress.png" },
   ],
   year: 2024,
+},
+{
+  id: 26,
+  title: "Square Neck Drop Waist Gown",
+  category: "Pattern Making & Garment Development",
+  description: "A structured square-neck gown featuring a fitted bodice with clean seam lines and a drop-waist silhouette. The gathered skirt extends into a soft train, creating fluid movement while maintaining structure at the bodice. This piece highlights precision pattern making, proportion balancing, and garment development expertise.",
+  images: [
+    { view: "front", image: "/portfolio/square-neck-drop-waist-gown.png" }
+  ],
+  year: 2024,
+},
+{
+  id: 27,
+  title: "Structured Square Neck Corset Bodice",
+  category: "Corsetry & Pattern Development",
+  description: "A structured square-neck corset bodice featuring clean neckline shaping, wide straps, and contoured seam lines. The extended pointed waist enhances silhouette definition while maintaining a modern structured look. This piece demonstrates precision pattern making, corsetry development, and fit-focused construction.",
+  images: [
+    { view: "front", image: "/portfolio/structured-square-neck-corset-bodice.png" }
+  ],
+  year: 2024,
+},
+{
+  id: 28,
+  title: "Ruffle Edge Corset Bodice",
+  category: "Corsetry & Pattern Development",
+  description: "A structured corset bodice featuring a soft ruffle edge neckline and contoured seam lines for enhanced shaping. The pointed waist silhouette creates a defined fit while maintaining a delicate feminine detail at the bust. This piece demonstrates advanced corsetry construction, precision pattern making, and silhouette refinement.",
+  images: [
+    { view: "front", image: "/portfolio/ruffle-edge-corset-bodice.png" }
+  ],
+  year: 2024,
 }
 ];
