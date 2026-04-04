@@ -268,7 +268,7 @@ export const portfolioItems = [
 {
   id: 29,
   title: "Bustier Mini Dress with Flared Hem",
-  category: "Corsetry & Garment Development",
+  category: "Pattern Making & Development",
   description: "A structured bustier mini dress featuring underwire cup shaping and a fitted bodice for enhanced silhouette definition. The clean waist seam transitions into a short skirt with a soft flared hem, creating a balanced feminine structure. This piece highlights corsetry techniques, structured pattern making, and refined garment construction.",
   images: [
     { view: "front", image: "/portfolio/bustier-mini-dress-flared-hem.png" }
@@ -278,7 +278,7 @@ export const portfolioItems = [
 {
   id: 30,
   title: "Twist Draped Corset Bodice",
-  category: "Draping & Corsetry",
+  category: "Draping & Couture Development",
   description: "A twist-front draped corset bodice developed through advanced draping techniques. The gathered center twist creates dynamic movement while enhancing bust shaping and waist definition. This piece showcases precision draping, fabric manipulation, and couture-inspired silhouette development.",
   images: [
     { view: "front", image: "/portfolio/twist-draped-corset-bodice.png" },
