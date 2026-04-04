@@ -201,5 +201,36 @@ export const portfolioItems = [
       { view: "front", image: "/portfolio/off-shoulder-draped-corset.png" }
     ],
     year: 2024,
-  }
+  },
+  {
+  id: 21,
+  title: "Structured Halter Corset Bodice",
+  category: "Pattern Making & Development",
+  description: "A structured halter-style corset bodice developed through precision pattern making and fit refinement. Featuring clean neckline shaping and supportive bust construction, this piece highlights technical garment development, contour shaping, and foundation garment expertise.",
+  images: [
+      { view: "front", image: "/portfolio/structured-halter-corset-bodice.png" },
+      { view: "back", image: "/portfolio/structured-halter-corset-bodice-back.png" },
+  ],
+  year: 2024,
+},
+{
+  id: 22,
+  title: "Asymmetric Draped Strapless Gown",
+  category: "Draping & Evening Wear",
+  description: "A strapless gown developed through advanced draping techniques featuring asymmetric directional folds and gathered waist shaping. The design enhances body contours while maintaining fluid elegance. This piece highlights precision draping, silhouette development, and couture construction expertise.",
+  images: [
+    { view: "front", image: "/portfolio/asymmetric-draped-strapless-gown.png" },
+  ],
+  year: 2024,
+},
+{
+  id: 25,
+  title: "Structured Corset Mini Dress",
+  category: "Pattern Making & Garment Development",
+  description: "A structured mini dress featuring a fitted corset-style bodice with wide straps and a shaped waist panel. The pleated skirt adds volume and balance to the structured upper silhouette. This piece demonstrates precision pattern making, structured garment development, and fit-focused construction.",
+  images: [
+    { view: "front", image: "/portfolio/structured-corset-mini-dress.png" },
+  ],
+  year: 2024,
+}
 ];

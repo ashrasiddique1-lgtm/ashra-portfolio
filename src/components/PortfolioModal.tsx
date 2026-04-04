@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 interface PortfolioItem {
@@ -21,9 +21,6 @@ interface Props {
 export default function PortfolioModal({ item, onClose }: Props) {
   const [scale, setScale] = useState(1);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const y = useMotionValue(0);
-  const opacity = useTransform(y, [-200, 0, 200], [0.5, 1, 0.5]);
 
   // Prevent background scroll when modal is open
   useEffect(() => {
@@ -79,14 +76,8 @@ export default function PortfolioModal({ item, onClose }: Props) {
       </button>
 
       {/* Image container */}
-      <motion.div
+      <div
         className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
-        style={{ y, opacity }}
-        drag="y"
-        dragConstraints={{ top: -200, bottom: 200 }}
-        onDragEnd={(_, info) => {
-          if (info.offset.y > 150) onClose();
-        }}
         onClick={(e) => e.stopPropagation()}
         onWheel={handleWheel}
       >
@@ -97,15 +88,15 @@ export default function PortfolioModal({ item, onClose }: Props) {
           animate={{ scale }}
           transition={{ type: "spring", stiffness: 200, damping: 25 }}
           onDoubleClick={handleDoubleClick}
-          className="relative w-full h-full flex items-center justify-center"
+          className="relative flex items-center justify-center"
         >
-          <div className="relative w-full h-full max-w-[90vw] max-h-[90vh] bg-black/50">
+          <div className="relative w-[90vw] h-[90vh] bg-black/50">
             <Image
               src={item.images[currentImageIndex].image}
               alt={`${item.title} - ${item.images[currentImageIndex].view}`}
               fill
               priority
-              quality={90}
+              quality={75}
               sizes="100vw"
               className="object-contain select-none"
             />
@@ -155,7 +146,7 @@ export default function PortfolioModal({ item, onClose }: Props) {
             )}
           </div>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Bottom Info */}
       <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
