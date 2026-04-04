@@ -9,7 +9,7 @@ interface PortfolioItem {
   title: string;
   category: string;
   description: string;
-  images: { view: "front" | "back", image: string }[];
+  images: { view: string, image: string }[];
   year: number;
 }
 
