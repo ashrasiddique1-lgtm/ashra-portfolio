@@ -152,7 +152,7 @@ export default function PortfolioModal({ item, onClose }: Props) {
       <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
         <h2 className="text-lg font-semibold">{item.title}</h2>
         <p className="text-sm opacity-80">
-          {item.category} • {item.year} • 
+          {item.category} • 
           <span className="capitalize ml-1">{item.images[currentImageIndex].view}</span>
         </p>
       </div>

@@ -62,7 +62,7 @@ export const portfolioItems = [
   },
   {
     id: 7,
-    title: "Tiered Pleated Mini Dress",
+    title: "Tiered Pleated Dress",
     category: "Pattern Making & Development",
     description: "A structured sleeveless mini dress featuring a sculpted bodice with curved seam detailing and a subtle front slit. The design transitions into a tiered pleated skirt with soft ruffle accents, creating volume and movement. Developed through precision pattern making and garment construction techniques, this piece highlights balance between tailored structure and playful silhouette.",
     images: [
@@ -216,7 +216,7 @@ export const portfolioItems = [
 {
   id: 22,
   title: "Asymmetric Draped Strapless Gown",
-  category: "Draping & Evening Wear",
+  category: "Draping & Couture Development",
   description: "A strapless gown developed through advanced draping techniques featuring asymmetric directional folds and gathered waist shaping. The design enhances body contours while maintaining fluid elegance. This piece highlights precision draping, silhouette development, and couture construction expertise.",
   images: [
     { view: "front", image: "/portfolio/asymmetric-draped-strapless-gown.png" },
@@ -225,9 +225,9 @@ export const portfolioItems = [
 },
 {
   id: 25,
-  title: "Structured Corset Mini Dress",
-  category: "Pattern Making & Garment Development",
-  description: "A structured mini dress featuring a fitted corset-style bodice with wide straps and a shaped waist panel. The pleated skirt adds volume and balance to the structured upper silhouette. This piece demonstrates precision pattern making, structured garment development, and fit-focused construction.",
+  title: "Structured Corset Dress",
+  category: "Pattern Making & Development",
+  description: "A structured dress featuring a fitted corset-style bodice with wide straps and a shaped waist panel. The pleated skirt adds volume and balance to the structured upper silhouette. This piece demonstrates precision pattern making, structured garment development, and fit-focused construction.",
   images: [
     { view: "front", image: "/portfolio/structured-corset-mini-dress.png" },
   ],
@@ -236,7 +236,7 @@ export const portfolioItems = [
 {
   id: 26,
   title: "Square Neck Drop Waist Gown",
-  category: "Pattern Making & Garment Development",
+  category: "Pattern Making & Development",
   description: "A structured square-neck gown featuring a fitted bodice with clean seam lines and a drop-waist silhouette. The gathered skirt extends into a soft train, creating fluid movement while maintaining structure at the bodice. This piece highlights precision pattern making, proportion balancing, and garment development expertise.",
   images: [
     { view: "front", image: "/portfolio/square-neck-drop-waist-gown.png" }
@@ -246,7 +246,7 @@ export const portfolioItems = [
 {
   id: 27,
   title: "Structured Square Neck Corset Bodice",
-  category: "Corsetry & Pattern Development",
+  category: "Pattern Making & Development",
   description: "A structured square-neck corset bodice featuring clean neckline shaping, wide straps, and contoured seam lines. The extended pointed waist enhances silhouette definition while maintaining a modern structured look. This piece demonstrates precision pattern making, corsetry development, and fit-focused construction.",
   images: [
     { view: "front", image: "/portfolio/structured-square-neck-corset-bodice.png" }
@@ -256,7 +256,7 @@ export const portfolioItems = [
 {
   id: 28,
   title: "Ruffle Edge Corset Bodice",
-  category: "Corsetry & Pattern Development",
+  category: "Pattern Making & Development",
   description: "A structured corset bodice featuring a soft ruffle edge neckline and contoured seam lines for enhanced shaping. The pointed waist silhouette creates a defined fit while maintaining a delicate feminine detail at the bust. This piece demonstrates advanced corsetry construction, precision pattern making, and silhouette refinement.",
   images: [
     { view: "front", image: "/portfolio/ruffle-edge-corset-bodice.png" }
