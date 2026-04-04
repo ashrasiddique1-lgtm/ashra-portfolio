@@ -5,7 +5,8 @@ export const portfolioItems = [
     category: "Draping & Couture Development",
     description: "A structured ivory corset dress featuring a sculpted bodice with clean neckline and contoured waist. The design transitions into a soft draped skirt enhanced with asymmetric cascading ruffles, creating a balance between structure and fluidity. Developed through precision pattern making and draping, this piece highlights technical craftsmanship and modern couture aesthetics.",
     images: [
-      { view: "front", image: "/portfolio/ivory-corset-dress.jpg" }
+      { view: "front", image: "/portfolio/ivory-corset-dress.jpg" },
+      { view: "back", image: "/portfolio/ivory-corset-dress-back.png" },
     ],
     year: 2025,
   },
@@ -66,7 +67,8 @@ export const portfolioItems = [
     category: "Pattern Making & Development",
     description: "A structured sleeveless mini dress featuring a sculpted bodice with curved seam detailing and a subtle front slit. The design transitions into a tiered pleated skirt with soft ruffle accents, creating volume and movement. Developed through precision pattern making and garment construction techniques, this piece highlights balance between tailored structure and playful silhouette.",
     images: [
-      { view: "front", image: "/portfolio/tiered-pleated-mini-dress.png" }
+      { view: "front", image: "/portfolio/tiered-pleated-mini-dress.png" },
+      { view: "back", image: "/portfolio/tiered-pleated-mini-dress-back.png" }
     ],
     year: 2025,
   },
@@ -260,6 +262,27 @@ export const portfolioItems = [
   description: "A structured corset bodice featuring a soft ruffle edge neckline and contoured seam lines for enhanced shaping. The pointed waist silhouette creates a defined fit while maintaining a delicate feminine detail at the bust. This piece demonstrates advanced corsetry construction, precision pattern making, and silhouette refinement.",
   images: [
     { view: "front", image: "/portfolio/ruffle-edge-corset-bodice.png" }
+  ],
+  year: 2024,
+},
+{
+  id: 29,
+  title: "Bustier Mini Dress with Flared Hem",
+  category: "Corsetry & Garment Development",
+  description: "A structured bustier mini dress featuring underwire cup shaping and a fitted bodice for enhanced silhouette definition. The clean waist seam transitions into a short skirt with a soft flared hem, creating a balanced feminine structure. This piece highlights corsetry techniques, structured pattern making, and refined garment construction.",
+  images: [
+    { view: "front", image: "/portfolio/bustier-mini-dress-flared-hem.png" }
+  ],
+  year: 2024,
+},
+{
+  id: 30,
+  title: "Twist Draped Corset Bodice",
+  category: "Draping & Corsetry",
+  description: "A twist-front draped corset bodice developed through advanced draping techniques. The gathered center twist creates dynamic movement while enhancing bust shaping and waist definition. This piece showcases precision draping, fabric manipulation, and couture-inspired silhouette development.",
+  images: [
+    { view: "front", image: "/portfolio/twist-draped-corset-bodice.png" },
+    { view: "side", image: "/portfolio/twist-draped-corset-bodice-side.png" }
   ],
   year: 2024,
 }

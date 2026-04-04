@@ -21,6 +21,8 @@ interface Props {
 export default function PortfolioModal({ item, onClose }: Props) {
   const [scale, setScale] = useState(1);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   // Prevent background scroll when modal is open
   useEffect(() => {
@@ -62,6 +64,34 @@ export default function PortfolioModal({ item, onClose }: Props) {
     );
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+    handleSwipe(e);
+  };
+
+  const handleSwipe = (e: React.TouchEvent) => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setCurrentImageIndex((prev) =>
+        prev === item.images.length - 1 ? 0 : prev + 1
+      );
+    }
+    if (isRightSwipe) {
+      setCurrentImageIndex((prev) =>
+        prev === 0 ? item.images.length - 1 : prev - 1
+      );
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl"
@@ -80,11 +110,13 @@ export default function PortfolioModal({ item, onClose }: Props) {
         className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
         onClick={(e) => e.stopPropagation()}
         onWheel={handleWheel}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         <motion.div
           drag
           dragConstraints={{ left: -500, right: 500, top: -500, bottom: 500 }}
-          whileTap={{ cursor: "grabbing" }}
+          // whileTap={{ cursor: "grabbing" }}
           animate={{ scale }}
           transition={{ type: "spring", stiffness: 200, damping: 25 }}
           onDoubleClick={handleDoubleClick}
@@ -111,7 +143,8 @@ export default function PortfolioModal({ item, onClose }: Props) {
                       prev === 0 ? item.images.length - 1 : prev - 1
                     )
                   }
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white text-3xl bg-white/20 hover:bg-white/40 backdrop-blur-md w-12 h-12 rounded-full flex items-center justify-center transition"
+                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 text-white text-2xl md:text-3xl bg-white/20 hover:bg-white/40 active:bg-white/50 backdrop-blur-md w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition touch-manipulation"
+                  aria-label="Previous image"
                 >
                   ←
                 </button>
@@ -123,7 +156,8 @@ export default function PortfolioModal({ item, onClose }: Props) {
                       prev === item.images.length - 1 ? 0 : prev + 1
                     )
                   }
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white text-3xl bg-white/20 hover:bg-white/40 backdrop-blur-md w-12 h-12 rounded-full flex items-center justify-center transition"
+                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 text-white text-2xl md:text-3xl bg-white/20 hover:bg-white/40 active:bg-white/50 backdrop-blur-md w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition touch-manipulation"
+                  aria-label="Next image"
                 >
                   →
                 </button>
