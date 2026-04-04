@@ -122,8 +122,6 @@ export default function PortfolioModal({ item, onClose }: Props) {
         onTouchEnd={handleTouchEnd}
       >
         <motion.div
-          drag
-          dragConstraints={{ left: -500, right: 500, top: -500, bottom: 500 }}
           // whileTap={{ cursor: "grabbing" }}
           animate={{ scale }}
           transition={{ type: "spring", stiffness: 200, damping: 25 }}
