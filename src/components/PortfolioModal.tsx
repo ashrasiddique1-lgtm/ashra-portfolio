@@ -28,6 +28,10 @@ export default function PortfolioModal({ item, onClose }: Props) {
   useEffect(() => {
     if (item) {
       document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      const scrollY = window.scrollY;
+      document.body.style.top = `-${scrollY}px`;
       setCurrentImageIndex(0);
       
       // Handle keyboard navigation
@@ -47,6 +51,10 @@ export default function PortfolioModal({ item, onClose }: Props) {
       return () => {
         window.removeEventListener("keydown", handleKeyDown);
         document.body.style.overflow = "unset";
+        document.body.style.position = "unset";
+        document.body.style.width = "unset";
+        document.body.style.top = "unset";
+        window.scrollTo(0, scrollY);
       };
     }
   }, [item]);
