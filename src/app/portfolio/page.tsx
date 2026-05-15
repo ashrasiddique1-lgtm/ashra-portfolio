@@ -1,10 +1,24 @@
-import PortfolioGrid from "@/components/PortfolioGrid";
+import { Suspense } from "react";
+import PortfolioGridContent from "@/components/PortfolioGridContent";
 import { portfolioItems } from "@/data/portfolioData";
 
 export const metadata = {
   title: "Portfolio - Ashra",
   description: "Explore Ashra's fashion design portfolio featuring various collections and styles.",
 };
+
+function PortfolioGridFallback() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[...Array(6)].map((_, i) => (
+        <div key={i} className="animate-pulse">
+          <div className="w-full h-96 bg-gray-200 dark:bg-gray-700 rounded mb-4" />
+          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function PortfolioPage() {
   return (
@@ -22,7 +36,9 @@ export default function PortfolioPage() {
       {/* Portfolio Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <PortfolioGrid items={portfolioItems} />
+          <Suspense fallback={<PortfolioGridFallback />}>
+            <PortfolioGridContent items={portfolioItems} />
+          </Suspense>
         </div>
       </section>
 
