@@ -9,10 +9,10 @@ export default function ContactPage() {
   return (
     <div className="w-full">
       {/* Header */}
-      <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900 py-20 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black dark:text-white">Get In Touch</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
             Open to collaborations in pattern making, draping, and garment development. 
             Whether you're a brand, designer, or production team, let's create refined and well-crafted garments together.
           </p>

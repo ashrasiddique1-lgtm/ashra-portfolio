@@ -27,11 +27,12 @@ export default function PortfolioModal({ item, onClose }: Props) {
   // Prevent background scroll when modal is open
   useEffect(() => {
     if (item) {
-      document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.width = "100%";
+      // Store the scroll position
       const scrollY = window.scrollY;
-      document.body.style.top = `-${scrollY}px`;
+      
+      // Prevent scroll without using position: fixed
+      document.body.style.overflow = "hidden";
+      
       setCurrentImageIndex(0);
       
       // Handle keyboard navigation
@@ -44,20 +45,19 @@ export default function PortfolioModal({ item, onClose }: Props) {
           setCurrentImageIndex((prev) =>
             prev === item.images.length - 1 ? 0 : prev + 1
           );
+        } else if (e.key === "Escape") {
+          onClose();
         }
       };
       
       window.addEventListener("keydown", handleKeyDown);
       return () => {
         window.removeEventListener("keydown", handleKeyDown);
-        document.body.style.overflow = "unset";
-        document.body.style.position = "unset";
-        document.body.style.width = "unset";
-        document.body.style.top = "unset";
-        window.scrollTo(0, scrollY);
+        // Simply restore overflow without changing scroll position
+        document.body.style.overflow = "";
       };
     }
-  }, [item]);
+  }, [item, onClose]);
 
   if (!item) return null;
 

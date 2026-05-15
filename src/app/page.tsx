@@ -6,18 +6,18 @@ export default function Home() {
     <div className="w-full">
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900 transition-colors duration-300">
         <div className="text-center px-4">
 
-          <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-2">
+          <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-2 text-black dark:text-white">
             ASHRA
           </h1>
 
-          <p className="text-gray-500 mb-6">
+          <p className="text-gray-500 dark:text-gray-400 mb-6">
             Fashion Designer • Pattern Maker
           </p>
 
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Specializing in Corsetry, Draping and Garment Development
             for Contemporary & Couture Fashion
           </p>
@@ -25,7 +25,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/portfolio"
-              className="px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition inline-block"
+              className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition inline-block"
             >
               View Portfolio
             </Link>

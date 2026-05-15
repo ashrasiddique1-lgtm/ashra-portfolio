@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import PortfolioModal from "./PortfolioModal";
 
@@ -18,9 +19,64 @@ interface PortfolioGridProps {
 }
 
 export default function PortfolioGrid({ items }: PortfolioGridProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [filter, setFilter] = useState("All");
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+  
   const categories = ["All", ...new Set(items.map((item) => item.category))];
+
+  // Initialize from URL on mount
+  useEffect(() => {
+    setIsMounted(true);
+    const itemId = searchParams.get("item");
+    const filterParam = searchParams.get("filter");
+    
+    if (filterParam) {
+      setFilter(filterParam);
+    }
+    
+    if (itemId) {
+      const item = items.find((i) => i.id === parseInt(itemId));
+      if (item) {
+        setSelectedItem(item);
+      }
+    }
+  }, [searchParams, items]);
+
+  const handleSelectItem = (item: PortfolioItem) => {
+    setSelectedItem(item);
+    // Add item ID to URL
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("item", item.id.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
+
+  const handleClose = () => {
+    setSelectedItem(null);
+    // Remove item ID from URL, retain filter
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("item");
+    if (params.toString()) {
+      router.push(`?${params.toString()}`, { scroll: false });
+    } else {
+      router.push("?", { scroll: false });
+    }
+  };
+
+  const handleFilterChange = (category: string) => {
+    setFilter(category);
+    // Update URL with filter, remove item selection
+    const params = new URLSearchParams();
+    if (category !== "All") {
+      params.set("filter", category);
+    }
+    router.push(`?${params.toString()}`, { scroll: false });
+    setSelectedItem(null);
+  };
+
+  if (!isMounted) return null;
 
   const filteredItems =
     filter === "All"
@@ -34,11 +90,11 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
         {categories.map((category) => (
           <button
             key={category}
-            onClick={() => setFilter(category)}
+            onClick={() => handleFilterChange(category)}
             className={`px-6 py-2 text-sm font-medium transition ${
               filter === category
-                ? "bg-black text-white"
-                : "bg-gray-200 text-gray-900 hover:bg-gray-300"
+                ? "bg-black dark:bg-white text-white dark:text-black"
+                : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600"
             }`}
           >
             {category}
@@ -52,9 +108,9 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
           <div
             key={item.id}
             className="group cursor-pointer overflow-hidden"
-            onClick={() => setSelectedItem(item)}
+            onClick={() => handleSelectItem(item)}
           >
-            <div className="relative w-full h-96 bg-gray-200 overflow-hidden">
+            <div className="relative w-full h-96 bg-gray-200 dark:bg-gray-700 overflow-hidden">
               <Image
                 src={item.images[0].image}
                 alt={item.title}
@@ -65,15 +121,17 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
             </div>
 
             <div className="mt-4">
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-sm text-gray-600">{item.category}</p>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">{item.category}</p>
               {/* <p className="text-xs text-gray-500 mt-2">{item.year}</p> */}
             </div>
           </div>
         ))}
       </div>
 
-      <PortfolioModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+      {selectedItem && (
+        <PortfolioModal item={selectedItem} onClose={handleClose} />
+      )}
     </div>
   );
 }
