@@ -30,6 +30,12 @@ export default function Navigation() {
               Portfolio
             </Link>
             <Link
+              href="/projects"
+              className="text-sm font-medium hover:text-gray-600 transition"
+            >
+              Projects
+            </Link>
+            <Link
               href="/about"
               className="text-sm font-medium hover:text-gray-600 transition"
             >
@@ -70,6 +76,13 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
             >
               Portfolio
+            </Link>
+            <Link
+              href="/projects"
+              className="block text-sm font-medium hover:text-gray-600 py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Projects
             </Link>
             <Link
               href="/about"
